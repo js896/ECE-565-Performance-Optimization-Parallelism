@@ -1,0 +1,28 @@
+(a) Compiled with -O3 option, I ran:
+    ./loop_performance 100000000
+    for 5 times and the shortest time is 223.211000 milliseconds.
+    And:
+    ./loop_performance 10000000
+    for 5 times, the shortest time is 23.005000 milliseconds.
+    Compiled with -O2 option, I ran:
+    ./loop_performance 100000000
+    for 5 times and the shortest time is 265.081000 milliseconds.
+    And:
+    ./loop_performance 10000000
+    for 5 times, the shortest time is 28.511000 milliseconds
+
+(b) Using the command:
+    uname -p
+    I got the processor architecture is x86_64
+    Using the command:
+    lscpu | grep "MHz"
+    I got the CPU frequency is 2600.000 MHz
+    The OS type is "Ubuntu 18.04.5 LTS", it's a VM.
+
+(c)&(d) Loop Unrolling:
+        
+        I run with -O3 option and array size of 10000000 for 5 times, the shortest time is 23.002000 milliseconds. With the array size of 100000000, the shortest time is 230.557000 milliseconds.
+
+        Loop Fusion:
+        I run with -O3 option and array size of 10000000 for 5 times, the shortest time is 57.445000 milliseconds. With the array size of 100000000, the shortest time is 577.073000 milliseconds.
+
